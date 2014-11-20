@@ -11,5 +11,6 @@ namespace DesertStorm.Models
         public string ModelTitle { get; set; }
 
         public virtual Make Make { get; set; }
+        public virtual Body Body { get; set; }
     }
 }

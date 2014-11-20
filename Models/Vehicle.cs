@@ -17,6 +17,7 @@ namespace DesertStorm.Models
         public Boolean Display { get; set; }
         public int Mileage { get; set; }
         public decimal Price { get; set; }
+        public decimal EngineSize { get; set; }
 
         public virtual Model Model { get; set; }
         public virtual Fuel Fuel { get; set; }
