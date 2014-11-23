@@ -53,6 +53,3 @@ c:\users\que\documents\visual studio 2013\Projects\DesertStorm\DesertStorm\bin\M
 c:\users\que\documents\visual studio 2013\Projects\DesertStorm\DesertStorm\obj\Debug\DesertStorm.csprojResolveAssemblyReference.cache
 c:\users\que\documents\visual studio 2013\Projects\DesertStorm\DesertStorm\obj\Debug\DesertStorm.dll
 c:\users\que\documents\visual studio 2013\Projects\DesertStorm\DesertStorm\obj\Debug\DesertStorm.pdb
-C:\Users\Que\Documents\Visual Studio 2013\Projects\DesertStorm\DesertStorm\obj\Debug\DesertStorm.Migrations.InitialCreate.resources
-C:\Users\Que\Documents\Visual Studio 2013\Projects\DesertStorm\DesertStorm\obj\Debug\DesertStorm.csproj.GenerateResource.Cache
-C:\Users\Que\Documents\Visual Studio 2013\Projects\DesertStorm\DesertStorm\obj\Debug\DesertStorm.Migrations.imagess.resources

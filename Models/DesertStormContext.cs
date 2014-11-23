@@ -17,15 +17,12 @@ namespace DesertStorm.Models
     
         public DesertStormContext() : base("name=DesertStormContext")
         {
+            Database.SetInitializer<DesertStormContext>(new DesertStormInitializer());
         }
 
         public System.Data.Entity.DbSet<DesertStorm.Models.Make> Makes { get; set; }
-
         public System.Data.Entity.DbSet<DesertStorm.Models.Model> Models { get; set; }
-
-        public System.Data.Entity.DbSet<DesertStorm.Models.Vehicle> Vehicles { get; set; }
-
-        public System.Data.Entity.DbSet<DesertStorm.Models.Image> Images { get; set; }
+        public System.Data.Entity.IDbSet<DesertStorm.Models.Vehicle> Vehicles { get; set; }
     
     }
 }

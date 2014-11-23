@@ -17,7 +17,8 @@ namespace DesertStorm.Controllers
         // GET: /Models/
         public ActionResult Index()
         {
-            return View(db.Models.ToList());
+            var models = db.Models.Include(m => m.Make);
+            return View(models.ToList());
         }
 
         // GET: /Models/Details/5
@@ -38,6 +39,7 @@ namespace DesertStorm.Controllers
         // GET: /Models/Create
         public ActionResult Create()
         {
+            ViewBag.MakeID = new SelectList(db.Makes, "MakeID", "MakeTitle");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace DesertStorm.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="ModelID,ModelTitle")] Model model)
+        public ActionResult Create([Bind(Include="ModelID,ModelTitle,MakeID")] Model model)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace DesertStorm.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.MakeID = new SelectList(db.Makes, "MakeID", "MakeTitle", model.MakeID);
             return View(model);
         }
 
@@ -70,6 +73,7 @@ namespace DesertStorm.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.MakeID = new SelectList(db.Makes, "MakeID", "MakeTitle", model.MakeID);
             return View(model);
         }
 
@@ -78,7 +82,7 @@ namespace DesertStorm.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="ModelID,ModelTitle")] Model model)
+        public ActionResult Edit([Bind(Include="ModelID,ModelTitle,MakeID")] Model model)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace DesertStorm.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.MakeID = new SelectList(db.Makes, "MakeID", "MakeTitle", model.MakeID);
             return View(model);
         }
 

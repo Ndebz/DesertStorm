@@ -1,0 +1,15 @@
+﻿@model IEnumerable<DesertStorm.Models.Vehicle>
+
+    @{
+        ViewBag.Title = "Index";
+    }
+
+    <h2>Index</h2>
+    @foreach (var item in Model)
+    {
+
+        <p>@Html.DisplayFor(modelItem => item.ShortDescription)</p>
+        <p>@Html.DisplayFor(modelItem => item.Description)</p>
+        <p>@Html.DisplayFor(modelItem => item.Color)</p>
+    }
+
