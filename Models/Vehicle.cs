@@ -23,11 +23,14 @@ namespace DesertStorm.Models
         public Boolean Display { get; set; }
         public int Mileage { get; set; }
         public decimal EngineSize { get; set; }
+        [Required]
+        public int ModelID { get; set; }
 
 
         public virtual Model Model { get; set; }
         public virtual Fuel Fuel { get; set; }
         public virtual Transmission Transmission { get; set; }
         public virtual ICollection<Image> Images { get; set; }
+
     }
 }

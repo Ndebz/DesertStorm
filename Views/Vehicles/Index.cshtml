@@ -4,12 +4,15 @@
         ViewBag.Title = "Index";
     }
 
-    <h2>Index</h2>
+    <h2>Vehicles For Sale</h2>
     @foreach (var item in Model)
     {
 
-        <p>@Html.DisplayFor(modelItem => item.ShortDescription)</p>
-        <p>@Html.DisplayFor(modelItem => item.Description)</p>
-        <p>@Html.DisplayFor(modelItem => item.Color)</p>
+        <div>
+            <p>@Html.DisplayFor(modelItem => item.ShortDescription)</p>
+            <p>@Html.DisplayFor(modelItem => item.Description)</p>
+            <p>@Html.DisplayFor(modelItem => item.Color)</p>
+            <p>@Html.DisplayFor(modelItem => item.Model.Make.MakeTitle) @Html.DisplayFor(modelItem => item.Model.ModelTitle)</p>
+        </div>
     }
 

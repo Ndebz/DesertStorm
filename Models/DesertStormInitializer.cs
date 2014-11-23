@@ -30,18 +30,32 @@ namespace DesertStorm.Models
 
             IList<Vehicle> defaultVehicles = new List<Vehicle>();
             defaultVehicles.Add(new Vehicle() 
-            { 
-                ShortDescription = "Sample Short Description",
-                Description = "Sample long description",
-                Price = 20000,
-                Tax = 0,
-                MOT = 0,
-                Color = "Red",
-                Display = true,
-                Mileage = 700000,
-                EngineSize = 2
-            }
+                { 
+                    ShortDescription = "A beautiful Fiesta",
+                    Description = "Sample long description",
+                    Price = 20000,
+                    Tax = 0,
+                    MOT = 0,
+                    Color = "Red",
+                    Display = true,
+                    Mileage = 700000,
+                    EngineSize = 2,
+                    ModelID = 1
+                }
                 );
+            defaultVehicles.Add(new Vehicle()
+                    {
+                        ShortDescription = "A lovely Citrieon",
+                        Description = "Sample long description",
+                        Price = 3500,
+                        Tax = 0,
+                        MOT = 0,
+                        Color = "Yellow",
+                        Display = true,
+                        Mileage = 700000,
+                        EngineSize = 1,
+                        ModelID = 4
+                    });
 
             foreach (Vehicle vehicle in defaultVehicles)
                 context.Vehicles.Add(vehicle);

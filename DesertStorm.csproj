@@ -163,6 +163,7 @@
     <Compile Include="Controllers\MakesController.cs" />
     <Compile Include="Controllers\ModelsController.cs" />
     <Compile Include="Controllers\VehiclesController.cs" />
+    <Compile Include="DL\VehicleData.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

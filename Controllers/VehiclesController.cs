@@ -1,4 +1,5 @@
-﻿using DesertStorm.Models;
+﻿using DesertStorm.DL;
+using DesertStorm.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,8 @@ namespace DesertStorm.Controllers
 
         public ActionResult Index()
         {
-            return View(db.Vehicles.ToList());
+            var vehicles = new VehicleData(db);
+            return View(vehicles.FetchAllVehicles());
         }
 	}
 }
